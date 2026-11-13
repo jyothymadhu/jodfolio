@@ -1,0 +1,244 @@
+
+/* ANOVA - Skills Page */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080b16;
+    color: #ffffff;
+}
+
+/* Navbar */
+
+.navbar {
+    width: 100%;
+    padding: 22px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0c1020;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    display: block;
+    width: 320px;
+    height: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #c4c6d4;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #9565ff;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* Main Section */
+
+.skills-section {
+    width: 84%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 80px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 65px;
+}
+
+.subtitle {
+    color: #9565ff;
+    font-size: 13px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.section-heading h1 {
+    font-size: 48px;
+    margin-bottom: 18px;
+}
+
+.section-heading h1 span {
+    background: linear-gradient(90deg, #9565ff, #4c8dff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.description {
+    color: #a7aabd;
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Skill Categories */
+
+.skills-category {
+    margin-bottom: 65px;
+}
+
+.skills-category h2 {
+    font-size: 25px;
+    margin-bottom: 28px;
+    padding-left: 15px;
+    border-left: 4px solid #9565ff;
+}
+
+/* Skill Cards */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.skill-card {
+    background: #111629;
+    border: 1px solid rgba(149,101,255,0.15);
+    border-radius: 15px;
+    padding: 30px 25px;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-7px);
+    border-color: #9565ff;
+    box-shadow: 0 10px 30px rgba(95,65,180,0.15);
+}
+
+.skill-icon {
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+
+.skill-card h3 {
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.skill-card p {
+    color: #a7aabd;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Personal Strengths */
+
+.strengths {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.strengths span {
+    padding: 12px 22px;
+    border-radius: 30px;
+    background: rgba(149,101,255,0.10);
+    border: 1px solid rgba(149,101,255,0.35);
+    color: #c8b5ff;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.strengths span:hover {
+    background: linear-gradient(90deg, #9565ff, #4c8dff);
+    color: white;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #0c1020;
+    color: #888da3;
+    font-size: 14px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Responsive Design */
+
+@media (max-width: 900px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 20px 6%;
+        position: relative;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: #0c1020;
+        flex-direction: column;
+        padding: 25px 6%;
+        gap: 22px;
+        z-index: 100;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .skills-section {
+        width: 88%;
+        padding: 60px 0;
+    }
+
+    .section-heading h1 {
+        font-size: 38px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-category h2 {
+        font-size: 22px;
+    }
+}
